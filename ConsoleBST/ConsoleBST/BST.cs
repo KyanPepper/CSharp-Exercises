@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -147,7 +148,11 @@ namespace ConsoleBST
                 return r;
             }
 
-
+       
+        }
+        public int minHeight()
+        {
+            return (int)Math.Log(Count() + 1, 2);
         }
     }
     
