@@ -32,6 +32,7 @@ else
 
 tree.InOrderTrav();
 Console.WriteLine("\n Tree Count:" + tree.Count());
+Console.WriteLine("\nLevels: " + tree.Levels());
 
 
 

@@ -114,8 +114,40 @@ namespace ConsoleBST
             i++;
         }
         //Levels Api
-        public void Levels(){
+        public int Levels(){
+            if(root == null)
+            {
+                return 0;
+            }
+            return Levels(root);
+
+        }
+
+        //Levels Logic
+        private int Levels(Node current)
+        {
+            int l = 0;
+            int r = 0;
+
+            if (current.left != null)
+            {
+                 l = (Levels(current.left) + 1);
+            }
+
+            if (current.right != null)
+            {
+                 r = (Levels(current.right) + 1);
+            }
             
+            if(l > r)
+            {
+                return l;
+            }else
+            {
+                return r;
+            }
+
+
         }
     }
     
