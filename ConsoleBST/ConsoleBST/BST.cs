@@ -29,7 +29,7 @@ namespace ConsoleBST
         }
         private void Insert(Node INode, Node current) { 
           
-            if(INode.data <= current.data)
+            if(INode.data < current.data)
             {
                 if(current.left == null)
                 {
@@ -39,7 +39,7 @@ namespace ConsoleBST
                     Insert(INode, current.left);
                 }
             }
-            else
+            else if(INode.data > current.data)
             {
                 if(current.right == null)
                 {
@@ -49,7 +49,9 @@ namespace ConsoleBST
                 {
                     Insert(INode, current.right);
                 }
-
+            }else
+            {
+                Console.WriteLine("Duplicate Value Cant Insert: " + INode.data);
             }
         
         }
