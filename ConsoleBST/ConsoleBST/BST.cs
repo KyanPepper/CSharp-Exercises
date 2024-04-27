@@ -154,6 +154,7 @@ namespace ConsoleBST
         {
             return (int)Math.Log(Count() + 1, 2);
         }
+        
     }
     
 }

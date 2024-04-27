@@ -1,7 +1,7 @@
 ﻿using ConsoleBST;
 internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main(string[] args2)
     {
         // Arrange / Setup
         BST tree = new BST();
